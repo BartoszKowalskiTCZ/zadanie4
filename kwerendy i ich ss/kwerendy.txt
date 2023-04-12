@@ -1,0 +1,8 @@
+1 SELECT id, imie, nazwisko, rok_urodzenia, zdjecie FROM osoby LIMIT 30;
+2 SELECT osoby.imie, osoby.nazwisko, osoby.rok_urodzenia, osoby.opis, osoby.zdjecie, hobby.nazwa FROM osoby INNER JOIN hobby ON osoby.id = hobby_id WHERE osoby.id = 10 LIMIT 25 OFFSET 0;
+3 SELECT AVG(rok_urodzenia) AS sredni_rok_urodzenia, MIN(rok_urodzenia) AS najnizszy_rok_urodzenia, MAX(rok_urodzenia) AS najwyzszy_rok_urodzenia
+FROM osoby;
+
+4UPDATE osoby 
+SET opis = 'Moim hobby jest wspinaczka górska' 
+WHERE Hobby_id = 4;
